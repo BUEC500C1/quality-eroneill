@@ -1,3 +1,6 @@
+## Erin O'Neill
+### Copyright 2020 erinkate@bu.edu
+
 # Continuous-Integration
 Objective of this exercise is to learn continuous build process (CB) and continuous integration (CI). 
 You are expected to: 
