@@ -1,7 +1,7 @@
 # simple test - first_test.py
 
 import pytest
-from convertnum.py import convertnum
+# from convertnum.py import convertnum
 
 def f():
     raise SystemExit(1)
