@@ -9,20 +9,22 @@ import string
 
 def convertnum(x):
     """convert the integer x into a string representation of x in roman numerals"""
-    
-    # base 6 is 0-5 in each position so divide by 6, save % and keep rolling 
-    stringsix = ""
-    if x < 6:
-        stringsix = str(x%6)
-        return stringsix
-    while x > 0 : 
-        firstsix = int(x%6)
-        x = (x-firstsix)/6
-        stringsix = str(firstsix) + stringsix
-    return str(stringsix)
+    # first set up our lists 
+    roman = ['M', 'D', 'C', 'L', 'X', 'V', 'I']
+    arabic = [1000, 500, 100, 50, 10, 5, 1] 
+    # divide thru each value and go down 
+    stringrom = ""
+    xval = x
+    for conval in range(len(arabic)):
+        nxtlet = xval//arabic[conval]
+        xval = xval%arabic[conval]
+        for i in range(nxtlet):
+            stringrom += roman[conval]
+        
+    return str(stringrom)
 
 def main():
-    print(convertnum(48))
+    print(convertnum(111) + " should be CXI")
 
 if __name__ == '__main__':
     main()
