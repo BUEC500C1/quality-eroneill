@@ -7,7 +7,7 @@
 import string 
 
 
-def convertnum(int x):
+def convertnum(x):
     """convert the integer x into a string representation of x in roman numerals"""
     
     # base 6 is 0-5 in each position so divide by 6, save % and keep rolling 
